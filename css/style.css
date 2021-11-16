@@ -6,4 +6,43 @@
 
 body {
   background-color: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.container{
+  width: 70vw;
+  margin: auto;
+}
+h1{
+    display: flex;
+  margin: auto;
+  color: white;
+  justify-content: center;
+}
+#manager-form {
+  background-color: #000;
+    padding: 5vw;
+}
+#manager-form input[type='text']{
+  display: block;
+  width: 50vw;
+  height: 30px;
+  padding: 8px;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.btn {
+  display: block;
+  width: 10vw;
+  height: 30px;
+  border: 0;
+  background: #333;
+  color: #fff;
+  border-radius: 0px 5px 5px 0px;
+  box-sizing: border-box;
+}
+#bitches {
+  display: flex;
 }

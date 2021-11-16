@@ -1,3 +1,16 @@
+:root{
+  --dark: #213745;
+  --neut: #805E73;
+  --light: #FFEBEE ;
+  --extra: #87BCDE ;
+  --dark2: #333947;
+  --neut2: #866DC5;
+  --light2: #FCFCED ;
+  --lbet2: #D2C9E3;
+  --extra2: #C5DCA0 ;
+  --betw2: #E1ECC7;
+  --w: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +18,7 @@
 }
 
 body {
-  background-color: #ccc;
+  background-color: var(--betw2);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -18,13 +31,13 @@ ul {
   margin: auto;
 }
 h1{
-    display: flex;
+  display: flex;
   margin: auto;
   color: white;
   justify-content: center;
 }
 #manager-form {
-  background-color: #000;
+  background-color: var(--dark2);
     padding: 5vw;
 }
 #manager-form input[type='text']{
@@ -33,7 +46,7 @@ h1{
   height: 30px;
   padding: 8px;
   border-radius: 5px 0px 0px 5px;
-  border: 1px solid #ccc;
+  border: none;
   box-sizing: border-box;
 }
 .btn {
@@ -41,8 +54,8 @@ h1{
   width: 10vw;
   height: 30px;
   border: 0;
-  background: #333;
-  color: #fff;
+  background: var(--light2);
+  color: var(--neut2);
   border-radius: 0px 5px 5px 0px;
   box-sizing: border-box;
 }
@@ -54,4 +67,19 @@ h1{
   color: #fff;
   padding: 5px;
   margin: 5px;
+}
+#task-list li{
+  padding: 5px 8px;
+}
+ .current {
+  background: var(--light2);
+  color: var(--neut2);
+}
+#task-list li:hover{
+  background: var(--lbet2);
+}
+.done {
+ background: var(--extra2);
+ color: var(--neut2);
+   text-decoration: line-through;
 }

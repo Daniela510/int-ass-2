@@ -10,6 +10,9 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+ul {
+  list-style: none;
+}
 .container{
   width: 70vw;
   margin: auto;
@@ -45,4 +48,10 @@ h1{
 }
 #bitches {
   display: flex;
+}
+.error {
+  background: orangered;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
 }

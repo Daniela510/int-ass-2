@@ -19,6 +19,7 @@
 
 body {
   background-color: var(--betw2);
+  color: var(--dark2);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -29,6 +30,7 @@ ul {
 .container{
   width: 70vw;
   margin: auto;
+    margin-top: 1vh;
 }
 h1{
   display: flex;
@@ -38,12 +40,13 @@ h1{
 }
 #manager-form {
   background-color: var(--dark2);
-    padding: 5vw;
+    padding: 3vh 5vw 5vh 5vw;
 }
 #manager-form input[type='text']{
   display: block;
   width: 50vw;
   height: 30px;
+  color: var(--dark2);
   padding: 8px;
   border-radius: 5px 0px 0px 5px;
   border: none;
@@ -58,6 +61,9 @@ h1{
   color: var(--neut2);
   border-radius: 0px 5px 5px 0px;
   box-sizing: border-box;
+}
+.btn:hover{
+  background: var(--extra2);
 }
 #bitches {
   display: flex;

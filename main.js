@@ -15,8 +15,9 @@ if (taskInput.value === '') {
   setTimeout(() => msg.remove(), 3000 );
 }else {
   const li = document.createElement('li');
-  li.appendChild(document.createTextNode(`${taskInput.value}`));
-  taskList.appendChild(li);
+  //li.appendChild(document.createTextNode(`${taskInput.value}`));
+  li.innerHTML= `<input type="checkbox" class="inBtn" value=""> ${taskInput.value}` ;
+  taskList.appendChild(li).classList.add('current');
   // clear fields
   taskInput.value = '';
 }

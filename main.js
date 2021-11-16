@@ -3,6 +3,7 @@ const myForm = document.querySelector('#manager-form');
 const taskInput = document.querySelector('#task');
 const msg = document.querySelector('.msg');
 const taskList = document.querySelector('#task-list');
+const check = document.querySelector('.inBtn');
 
 myForm.addEventListener('submit', onSubmit);
 
@@ -22,8 +23,12 @@ if (taskInput.value === '') {
   taskInput.value = '';
 }
 }
+check.addEventListener('click', onCheck);
 
-
+function onCheck(e) {
+  console.log('checked a box');
+  //its only monitoring the first onee
+}
 
 
 

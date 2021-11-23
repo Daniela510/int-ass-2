@@ -8,8 +8,8 @@ const taskList = document.querySelector('#task-list');
 // adding a task
 myForm.addEventListener('submit', onSubmit);
 
-//removing a task
-taskList.addEventListener('click', removeTask);
+//removing a task or marking as done
+taskList.addEventListener('click', aChange);
 
 function onSubmit(e) {
   e.preventDefault();
@@ -29,12 +29,21 @@ if (taskInput.value === '') {
 }
 }
 
-function removeTask(e) {
+function aChange(e) {
   if (e.target.classList.contains('delete')) {
     const li = e.target.parentElement;
     taskList.removeChild(li);
+  }else{ if (e.target.classList.contains('c')){
+        // task is getting done
+
+    } else {if (e.target.classList.contains('d')){
+       // task is marked undone
+
+      }
+    }
   }
 }
+
 
 
 

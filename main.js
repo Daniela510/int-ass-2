@@ -3,6 +3,7 @@ const myForm = document.querySelector('#manager-form');
 const taskInput = document.querySelector('#task');
 const msg = document.querySelector('.msg');
 const taskList = document.querySelector('#task-list');
+const remove = document.querySelector('#remove');
 
 
 // adding a task
@@ -10,6 +11,9 @@ myForm.addEventListener('submit', onSubmit);
 
 //removing a task or marking as done
 taskList.addEventListener('click', aChange);
+
+//remove ALL
+remove.addEventListener('click', remAll);
 
 function onSubmit(e) {
   e.preventDefault();
@@ -57,7 +61,12 @@ console.log('a done task');
   }
 }
 
-
+function remAll() {
+  const li = document.querySelectorAll('li');
+  for (var i = 0; i < li.length; i++) {
+    taskList.removeChild(li[i]);
+  }
+}
 
 
 

@@ -21,7 +21,7 @@ if (taskInput.value === '') {
 }else {
   const li = document.createElement('li');
   //li.appendChild(document.createTextNode(`${taskInput.value}`));
-  li.innerHTML= `<div class="bitches"><button class="btn-small"></button> <p> ${taskInput.value} </p></div> <button id="delete" class="delete">X</button>` ;
+  li.innerHTML= `<div class="bitches"><button class="btn-small c"></button> <p> ${taskInput.value} </p></div> <button id="delete" class="delete">X</button>` ;
   taskList.appendChild(li).classList.add('current');
   console.log(this);
   // clear fields
@@ -30,15 +30,28 @@ if (taskInput.value === '') {
 }
 
 function aChange(e) {
-  if (e.target.classList.contains('delete')) {
-    const li = e.target.parentElement;
+  const t = e.target;
+  if (t.classList.contains('delete')) {
+    const li = t.parentElement;
     taskList.removeChild(li);
-  }else{ if (e.target.classList.contains('c')){
+  }else{
+  const li = t.parentElement.parentElement;
+     if (t.classList.contains('c')){
         // task is getting done
+        t.classList='btn-small d';
+        t.innerHTML = "&check;";
+        t.nextElementSibling.classList = 'struck';
+        li.classList = "done";
 
-    } else {if (e.target.classList.contains('d')){
-       // task is marked undone
+console.log('a current task');
+    } else {if (t.classList.contains('d')){
+        // task is marked undone
+        t.classList='btn-small c';
+        t.innerHTML = "";
+        t.nextElementSibling.classList = '';
+        li.classList = "current";
 
+console.log('a done task');
       }
     }
   }

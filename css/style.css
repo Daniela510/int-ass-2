@@ -65,8 +65,22 @@ h1{
 .btn:hover{
   background: var(--extra2);
 }
-#bitches {
+.btn-small{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background:  var(--extra2);
+  color: var(--light2);
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.bitches{
   display: flex;
+  align-items: center;
 }
 .error {
   background: orangered;
@@ -76,16 +90,28 @@ h1{
 }
 #task-list li{
   padding: 5px 8px;
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+}
+#task-list li:hover{
+  background: var(--lbet2);
+}
+#delete{
+  background: none;
+  border: none;
+  color:var(--neut2);
 }
  .current {
   background: var(--light2);
   color: var(--neut2);
 }
-#task-list li:hover{
-  background: var(--lbet2);
-}
+
 .done {
  background: var(--extra2);
  color: var(--neut2);
-   text-decoration: line-through;
+
+}
+.struck{
+  text-decoration: line-through;
 }

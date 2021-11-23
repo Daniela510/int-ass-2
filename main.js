@@ -16,18 +16,12 @@ if (taskInput.value === '') {
 }else {
   const li = document.createElement('li');
   //li.appendChild(document.createTextNode(`${taskInput.value}`));
-  li.innerHTML= `<input type="checkbox" class="inBtn" value=""> ${taskInput.value}` ;
+  li.innerHTML= `<div class="bitches"><button class="btn-small"></button> <p> ${taskInput.value} </p></div> <button id="delete">X</button>` ;
   taskList.appendChild(li).classList.add('current');
   console.log(this);
   // clear fields
   taskInput.value = '';
 }
-}
-taskList.addEventListener('click', onCheck);
-
-function onCheck(e) {
-  console.log('checked a box');
-  console.log(this);
 }
 
 

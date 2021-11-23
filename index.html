@@ -12,7 +12,7 @@
       <form id="manager-form">
         <h1>Task Management</h1>
         <div class="msg"></div>
-        <div id="bitches">
+        <div class="bitches">
         <div>
           <input type="text" id="task">
         </div>
@@ -20,10 +20,14 @@
               </div>
       </form>
       <ul id="task-list">
-        <li class="current"> <input type="checkbox" class="inBtn" value=""> add checkmarks</li>
-        <li class="done"> <input type="checkbox" class="inBtn" value="" checked> strikethrough if its done</li>
-        <li class="current"> <input type="checkbox" class="inBtn" value=""> small x to remove task</li>
-        <li class="current"> <input type="checkbox" class="inBtn" value=""> a remove all button</li>
+        <li class="current"> <div class="bitches"><button class="btn-small"></button> <p>add checkmarks</p>
+                </div> <button id="delete">X</button> </li>
+        <li class="done"> <div class="bitches"><button class="btn-small">&check;</button> <p class='struck'>strikethrough if its done</p>
+                </div> <button id="delete">X</button> </li>
+        <li class="current"> <div class="bitches"><button class="btn-small"></button> <p>small x to remove task</p>
+                </div><button id="delete">X</button> </li>
+        <li class="current"> <div class="bitches"><button class="btn-small"></button> <p>a remove all button</p>
+                </div><button id="delete">X</button> </li>
       </ul>
     </section>
     <script src="main.js"></script>
